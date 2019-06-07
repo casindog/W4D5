@@ -1,0 +1,20 @@
+<h1>Edit Form</h1>
+
+<form action="<%=user_url(@user)%>" method="POST">
+
+  <input type="hidden" name='authenticity_token' value='form_authencity_token'>
+  <input type="hidden" name="_method" value="patch">
+
+  <label> Name:
+    <input type="text" name="user[name]" value="<%=@user.name%>">
+  </label>
+
+  <input type="submit" value="Edit me!!!">
+</form>
+
+<form action="<%= user_url(@user) %>" method="POST">
+  <input type="hidden" name='authenticity_token' value='form_authencity_token'>
+  <input type="hidden" name="_method" value="delete">
+
+  <input type="submit" value="DELETE THIS USER!!!">
+</form>
